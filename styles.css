@@ -1,3 +1,45 @@
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
+body{
+    margin: 0;
+    font-family: Poppins, sans-serif;
+}
+.top{
+    text-align: center;
+    margin-top: 5em;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    /* align-content: center; */
+    margin: 5rem 10%;
+    /* gap: 2rem; */
+}
+
+
+.card  {
+    flex-basis: 100%;
+    border-top: 5px solid red;
+    border-radius: 5px;
+    padding: 1.5rem;
+    box-shadow: 0 0.5rem 15px rgba(0,0,0,0.2);
+
+    transition: 0.3s ease-in-out;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+.card-stack {
+    display: flex;
+    flex-direction: column;
+    /* gap: 2rem; */
+}
+/* #aqua{
+    margin-left: 2rem;
+}
+#blue{
+    margin-right: 2rem;
+} */
