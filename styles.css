@@ -4,6 +4,8 @@
 body{
     margin: 0;
     font-family: Poppins, sans-serif;
+    background: RGB(250,250,250);
+
 }
 .top{
     text-align: center;
@@ -11,35 +13,86 @@ body{
 }
 .container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto;
+    width: 95%;
+    max-width: 1280px;
+    gap: 2rem;
+}
+.col-stack{
+    flex: 1 1 100%;
+}
+.col-stack:nth-of-type(2){
+    display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
-    /* align-content: center; */
-    margin: 5rem 10%;
-    /* gap: 2rem; */
+    gap: 2rem;
+}
+.col-stack:nth-of-type(2) > .card{
+    flex-basis: 100%;
 }
 
-
 .card  {
-    flex-basis: 100%;
-    border-top: 5px solid red;
+    /* flex-basis: 100%; */
+    min-height: 200px;
+    border-top: 5px solid;
     border-radius: 5px;
-    padding: 1.5rem;
+    padding: 2rem;
     box-shadow: 0 0.5rem 15px rgba(0,0,0,0.2);
+    
+    position: relative;
 
     transition: 0.3s ease-in-out;
 }
 .card:hover{
     transform: scale(1.05);
+    box-shadow: 0 0.75rem 20px rgba(0,0,0,0.15);
 }
 .card-stack {
     display: flex;
     flex-direction: column;
     /* gap: 2rem; */
 }
-/* #aqua{
-    margin-left: 2rem;
+.card > img {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
 }
-#blue{
-    margin-right: 2rem;
-} */
+
+#aqua{ border-color: RGB(68,210,209);}
+#red { border-color: RGB(235,84,84);}
+#orange{ border-color: RGB(252,174,75);}
+#blue{ border-color: RGB(83,157,240);}
+
+.top >* {
+    font-weight: 400;
+}
+.top .bold {
+    font-weight: 700;
+}
+.top > h6 {
+    font-size: 1.125rem;
+    font-weight: 200;
+}
+
+.card > h3 {
+    margin-top: 0;
+}
+.card > p {
+    font-weight: 300;
+}
+
+@media screen and (max-width: 1000px) {
+    .container{
+        flex-wrap: wrap;
+        width: 85%;
+        max-width: 500px;
+    }
+    .top {
+        width: 85%;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
